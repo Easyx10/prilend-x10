@@ -9,7 +9,7 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #ff6f00, #f44336);
+      background: linear-gradient(135deg, #ff9900, #ff3300);
       color: #fff;
       display: flex;
       justify-content: center;
@@ -18,25 +18,45 @@
       text-align: center;
       animation: fadeIn 1.5s ease-in;
     }
+
     h1 {
       font-size: 28px;
-      margin-bottom: 10px;
+      line-height: 1.5;
+      animation: pulse 1.5s infinite alternate;
     }
-    p {
-      font-size: 18px;
-      opacity: 0.9;
-    }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.05); }
+    }
   </style>
-  <meta http-equiv="refresh" content="5;url=https://1wqjnb.com/casino/list?open=register&p=p7pl">
 </head>
 <body>
-  <div>
-    <h1>Нашёл стратегию как сделать 10X 💰</h1>
-    <p>Не переключайся — сейчас покажу как это работает 👇</p>
-  </div>
+  <h1>Сейчас покажу, как я сделал x10 💰<br>Подожди пару секунд...</h1>
+
+  <script>
+    setTimeout(() => {
+      fetch("https://ipapi.co/json/")
+        .then(res => res.json())
+        .then(data => {
+          const country = data.country;
+          if (country === "UA") {
+            window.location.href = "https://1wjaov.top/casino/list?open=register&p=oh9m";
+          } else if (country === "RU") {
+            window.location.href = "https://1wqjnb.com/casino/list?open=register&p=p7pl";
+          } else {
+            window.location.href = "https://1wjaov.top/casino/list?open=register&p=oh9m"; // default
+          }
+        })
+        .catch(() => {
+          window.location.href = "https://1wjaov.top/casino/list?open=register&p=oh9m"; // fallback
+        });
+    }, 5000);
+  </script>
 </body>
 </html>
