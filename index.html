@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Загрузка стратегии...</title>
+  <title>Секретная стратегия 💸</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #ffcc00, #ff3300);
+      background: linear-gradient(135deg, #ff9900, #ff3300);
       color: #fff;
       display: flex;
       justify-content: center;
@@ -18,35 +18,52 @@
       text-align: center;
       animation: fadeIn 1.5s ease-in;
     }
+
     h1 {
-      font-size: 28px;
-      max-width: 90%;
+      font-size: 30px;
+      margin-bottom: 15px;
     }
+
+    p {
+      font-size: 20px;
+      animation: pulse 1s infinite alternate;
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.05); }
+    }
   </style>
 </head>
 <body>
-  <h1>💸 Сейчас покажу, как сделал 10x — не переключайся!</h1>
+  <div>
+    <h1>Нашёл способ сделать x10 🚀</h1>
+    <p>Не переключайся, сейчас покажу как 💰</p>
+  </div>
 
   <script>
     setTimeout(() => {
       fetch('https://ipapi.co/json/')
         .then(res => res.json())
         .then(data => {
-          const country = data.country_code;
-          if (country === "UA") {
-            window.location.href = "https://1wjaov.top/casino/list?open=register&p=oh9m";
-          } else if (country === "RU") {
-            window.location.href = "https://1wqjnb.com/casino/list?open=register&p=p7pl";
+          const country = data.country;
+          if (country === 'UA') {
+            window.location.href = 'https://1wjaov.top/casino/list?open=register&p=oh9m';
+          } else if (country === 'RU') {
+            window.location.href = 'https://1wqjnb.com/casino/list?open=register&p=p7pl';
           } else {
-            window.location.href = "https://1wjaov.top/casino/list?open=register&p=oh9m"; // запасная ссылка
+            // Страна не определена — по умолчанию на RU
+            window.location.href = 'https://1wqjnb.com/casino/list?open=register&p=p7pl';
           }
         })
         .catch(() => {
-          window.location.href = "https://1wjaov.top/casino/list?open=register&p=oh9m";
+          // В случае ошибки тоже редирект
+          window.location.href = 'https://1wqjnb.com/casino/list?open=register&p=p7pl';
         });
     }, 5000);
   </script>
