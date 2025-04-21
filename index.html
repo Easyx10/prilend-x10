@@ -2,70 +2,77 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Секретная стратегия 💸</title>
+  <title>Загрузка стратегии...</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
+      background: linear-gradient(135deg, #ff6f00, #f44336);
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #ff9900, #ff3300);
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       text-align: center;
+      color: #fff;
+      margin: 0;
+      padding: 100px 20px;
       animation: fadeIn 1.5s ease-in;
     }
-
     h1 {
-      font-size: 30px;
-      margin-bottom: 15px;
+      font-size: 34px;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
     }
-
     p {
       font-size: 20px;
-      animation: pulse 1s infinite alternate;
+      margin-bottom: 40px;
+      color: #fffde7;
+      animation: slideIn 2s ease;
+    }
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 5px solid rgba(255,255,255,0.2);
+      border-top: 5px solid white;
+      border-radius: 50%;
+      margin: 0 auto;
+      animation: spin 1s linear infinite;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      100% { transform: scale(1.05); }
+    @keyframes slideIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
   </style>
 </head>
 <body>
-  <div>
-    <h1>Нашёл способ сделать x10 🚀</h1>
-    <p>Не переключайся, сейчас покажу как 💰</p>
-  </div>
+  <h1>🔥 Стратегия, которая дала x10 💸</h1>
+  <p>Подбираем подходящий метод именно для твоей страны... Подождите пару секунд ⏳</p>
+  <div class="spinner"></div>
 
   <script>
     setTimeout(() => {
-      fetch('https://ipapi.co/json/')
-        .then(res => res.json())
+      fetch("https://ipapi.co/json/")
+        .then(response => response.json())
         .then(data => {
           const country = data.country;
-          if (country === 'UA') {
-            window.location.href = 'https://1wjaov.top/casino/list?open=register&p=oh9m';
-          } else if (country === 'RU') {
-            window.location.href = 'https://1wqjnb.com/casino/list?open=register&p=p7pl';
+          if (country === "UA") {
+            window.location.href = "https://1wjaov.top/casino/list?open=register&p=oh9m";
+          } else if (country === "RU") {
+            window.location.href = "https://1wqjnb.com/casino/list?open=register&p=p7pl";
           } else {
-            // Страна не определена — по умолчанию на RU
-            window.location.href = 'https://1wqjnb.com/casino/list?open=register&p=p7pl';
+            window.location.href = "https://1wqjnb.com/casino/list?open=register&p=p7pl";
           }
         })
         .catch(() => {
-          // В случае ошибки тоже редирект
-          window.location.href = 'https://1wqjnb.com/casino/list?open=register&p=p7pl';
+          window.location.href = "https://1wqjnb.com/casino/list?open=register&p=p7pl";
         });
-    }, 5000);
+    }, 4000);
   </script>
 </body>
 </html>
