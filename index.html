@@ -1,78 +1,90 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <title>Загрузка стратегии...</title>
-  <style>
-    body {
-      background: linear-gradient(135deg, #ff6f00, #f44336);
-      font-family: 'Segoe UI', sans-serif;
-      text-align: center;
-      color: #fff;
-      margin: 0;
-      padding: 100px 20px;
-      animation: fadeIn 1.5s ease-in;
-    }
-    h1 {
-      font-size: 34px;
-      margin-bottom: 20px;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
-    }
-    p {
-      font-size: 20px;
-      margin-bottom: 40px;
-      color: #fffde7;
-      animation: slideIn 2s ease;
-    }
-    .spinner {
-      width: 50px;
-      height: 50px;
-      border: 5px solid rgba(255,255,255,0.2);
-      border-top: 5px solid white;
-      border-radius: 50%;
-      margin: 0 auto;
-      animation: spin 1s linear infinite;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Начни свою стратегию</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+        }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+        .container {
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+        }
 
-    @keyframes slideIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
+        h1 {
+            font-size: 36px;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
 
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  </style>
+        p {
+            font-size: 18px;
+            color: #ddd;
+            margin-bottom: 40px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 24px;
+            padding: 20px 40px;
+            margin: 20px;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background-color 0.3s, transform 0.3s;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        .button.russia {
+            background-color: #FF5733;
+        }
+
+        .button.russia:hover {
+            background-color: #e04f2b;
+        }
+
+        .button.ukraine {
+            background-color: #1D9CFC;
+        }
+
+        .button.ukraine:hover {
+            background-color: #168cbf;
+        }
+    </style>
 </head>
 <body>
-  <h1>🔥 Стратегия, которая дала x10 💸</h1>
-  <p>Подбираем подходящий метод именно для твоей страны... Подождите пару секунд ⏳</p>
-  <div class="spinner"></div>
 
-  <script>
-    setTimeout(() => {
-      fetch("https://ipapi.co/json/")
-        .then(response => response.json())
-        .then(data => {
-          const country = data.country;
-          if (country === "UA") {
-            window.location.href = "https://1wjaov.top/casino/list?open=register&p=oh9m";
-          } else if (country === "RU") {
-            window.location.href = "https://1wqjnb.com/casino/list?open=register&p=p7pl";
-          } else {
-            window.location.href = "https://1wqjnb.com/casino/list?open=register&p=p7pl";
-          }
-        })
-        .catch(() => {
-          window.location.href = "https://1wqjnb.com/casino/list?open=register&p=p7pl";
-        });
-    }, 4000);
-  </script>
+<div class="container">
+    <h1>Начни свою стратегию сегодня!</h1>
+    <p>Готов изменить свою жизнь? Сделай первый шаг, выбери свою страну и начни путь к успеху.</p>
+    
+    <a href="https://1wbfqv.life/casino/list?open=register&p=g3q1" class="button russia" target="_blank">Начать стратегию для России</a>
+    <br>
+    <a href="https://1wkebz.life/casino/list?open=register&p=8efk" class="button ukraine" target="_blank">Начать стратегию для Украины</a>
+</div>
+
 </body>
 </html>
